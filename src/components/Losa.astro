@@ -1,0 +1,15 @@
+---
+interface Props {
+    source: string,
+    name:   string,
+    price:  string,
+}
+
+const { source, name, price } = Astro.props;
+---
+
+<div class="w-full">
+    <img class="w-40 h-40 mx-auto" src={source} alt="losa_imagen" />
+    <h3 class="text-center font-bold text-lg">{name}</h3>
+    <h3 class="text-center">{price}</h3>
+</div>

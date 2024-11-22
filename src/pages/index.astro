@@ -1,0 +1,61 @@
+---
+import Losa from '../components/Losa.astro';
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Navbar />
+		
+		<!-- HERO -->
+		<section class="bg-[url(/hero.jpg)] bg-center bg-cover pb-20">
+			<div class="text-white mx-20 pt-64">
+				<h1 class="font-bold text-5xl">Renta de</h1>
+				<h1 class="font-bold text-6xl mb-3">Losas y Banquetes</h1>
+				<h5 class="mb-7">Para eventos en Saltillo, Coahuila</h5>
+				<a href="/contacto" class="bg-orange-500 py-3 px-14 rounded-md hover:bg-orange-700">CONTACTANOS</a>
+			</div>
+		</section>
+		<!-- END -->
+
+		<!-- SECTION -->
+		<section class="flex items-center justify-center w-full my-20">
+			<div>
+				<h2 class="text-center text-4xl font-bold">Renta de losa y Banquetes</h2>
+				<p class="text-center mt-5 text-lg font-light">En Banquete Las Delicias tenemos todo el equipo para que tu evento destaque: vajillas, cubiertos ademas de banquetes</p>
+			</div>
+		</section>
+		<!-- END OF SECTION -->
+
+		<!-- LOSA -->
+		<h1 class="font-bold text-xl text-center">Losa</h1>
+		<section class="flex w-full px-10 mt-10">
+			<div class="w-1/4">
+				<Losa source="/plato.avif" name="Plato" price="$7" />
+			</div>
+			<div class="w-1/4">
+				<Losa source="/tenedor.webp" name="Tenedor" price="$3" />
+			</div>
+			<div class="w-1/4">
+				<Losa source="/cuchara.webp" name="Cuchara" price="$3" />
+			</div>
+			<div class="w-1/4">
+				<Losa source="/plato_base.jpg" name="Plato base" price="$5" />
+			</div>
+		</section>
+		<!-- END OF LOSA -->
+
+		<!-- BANQUETES -->
+		<h1 class="font-bold text-xl text-center">Banquetes</h1>
+		<section class="my-10 flex w-full">
+			<div class="w-1/2 flex justify-center">
+				<img class="w-96" src="/resources/resource_1.jpeg" alt="resource_1_image">
+			</div>
+			<div class="w-1/2 flex justify-center">
+				<img class="w-96" src="/resources/resource_3.jpeg" alt="resource_3_image">
+			</div>
+		</section>
+		<!-- END OF BANQUETES -->
+	</main>
+</Layout>
