@@ -1,0 +1,51 @@
+---
+---
+
+<nav class="bg-gray-700 text-white w-full py-5 px-5 md:px-10 flex items-center justify-between relative">
+    <div>
+        <a href="/">
+            <h3 class="font-medium text-lg">BANQUETES</h3>
+            <h3 class="font-extrabold text-2xl">LAS DELICIAS</h3>
+        </a>
+    </div>
+
+    <button 
+        id="menu-toggle" 
+        class="lg:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-400 hover:border-gray-400"
+        aria-label="Toggle menu"
+    >
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+
+    <div 
+        id="menu" 
+        class="hidden lg:flex flex-col lg:flex-row w-full lg:w-auto absolute lg:static top-full left-0 bg-gray-700 lg:bg-transparent lg:items-center lg:space-x-8 space-y-5 lg:space-y-0 p-5 lg:p-0 z-10"
+    >
+        <ul class="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-full">
+            <li><a class="hover:text-gray-400 lg:ml-32 font-bold block py-2 lg:py-0" href="/">Inicio</a></li>
+            <li><a class="hover:text-gray-400 lg:ml-32 font-bold block py-2 lg:py-0" href="/productos">Productos</a></li>
+            <li><a class="hover:bg-orange-700 lg:ml-32 font-bold bg-orange-500 px-3 py-2 rounded-md block lg:py-0" href="/contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('hidden');
+        
+        if (!isOpen) {
+            menuToggle.style.position = 'absolute';
+            menuToggle.style.top = '1rem';
+            menuToggle.style.right = '1rem';
+            menu.style.top = `${nav.offsetHeight}px`;
+        } else {
+            menuToggle.style.position = 'static';
+        }
+    });
+</script>

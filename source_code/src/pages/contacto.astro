@@ -1,0 +1,38 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+const apiWhatsapp = "https://api.whatsapp.com/send/?phone=528446654628"
+
+---
+
+<section>
+    <Navbar />
+
+    <!-- HERO -->
+    <section>
+        <div class="py-10">
+            <h1 class="text-5xl text-center font-extrabold">Contactanos</h1>
+        </div>
+    </section>
+    <!-- END OF HERO -->
+
+    <!-- FORM -->
+    <section class="flex flex-col text-center bg-gray-400">
+        <div class="bg-white my-10 rounded-lg py-10 mx-10 lg:mx-20">
+            <h2 class="text-blue-950 text-3xl font-bold">Informacion de contacto</h2>
+            <h2 class="mt-2 text-xl">Numeros de telefono</h2>
+            <div class="flex justify-center">
+                <ul>
+                    <li class="flex items-center"><img class="w-8" src="/whatsapp.png" alt="whatsapp_image" /><h2><span class="font-extrabold">(52)</span> 844 665 - 4628</h2></li>
+                    <li class="flex items-center"><img class="w-8" src="/whatsapp.png" alt="whatsapp_image" /><h2><span class="font-extrabold">(52)</span> 844 130 - 7346</h2></li>
+                    <li class="flex items-center"><img class="w-8" src="/whatsapp.png" alt="whatsapp_image" /><h2><span class="font-extrabold">(52)</span> 844 858 - 0335</h2></li>
+                </ul>
+            </div>
+            <h2 class="pt-10 font-bold text-xl">Marcanos a cualquier hora</h2>
+        </div>
+    </section>
+    <!-- END OF FORM -->
+
+    <Footer />
+</section>
